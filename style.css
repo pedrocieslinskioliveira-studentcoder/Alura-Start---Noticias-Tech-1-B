@@ -1,0 +1,90 @@
+/* Configurações Globais e fundo preto com letras brancas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Cabeçalho: fundo azul e letras pretas */
+header {
+    background-color: #007bff;
+    color: #000000;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.noticia h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #f8f9fa;
+}
+
+.meta {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Imagem Responsiva */
+.imagem-noticia {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #333;
+}
+
+.noticia p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+/* Botão de Interação */
+button {
+    background-color: #007bff;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.escondido {
+    display: none;
+}
+
+#feedback {
+    margin-top: 1rem;
+    color: #28a745;
+    font-weight: bold;
+}
