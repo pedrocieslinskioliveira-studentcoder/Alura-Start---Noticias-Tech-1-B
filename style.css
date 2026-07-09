@@ -32,6 +32,11 @@ header h1 {
     padding: 0 1.5rem;
 }
 
+/* Espaçamento entre os artigos */
+.noticia {
+    margin-bottom: 4rem;
+}
+
 .noticia h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -70,7 +75,7 @@ button {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
     margin-top: 1rem;
 }
 
@@ -79,11 +84,21 @@ button:hover {
     color: #ffffff;
 }
 
+/* Estado do botão quando curtido */
+button.curtido {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+button.curtido:hover {
+    background-color: #218838;
+}
+
 .escondido {
     display: none;
 }
 
-#feedback {
+.feedback {
     margin-top: 1rem;
     color: #28a745;
     font-weight: bold;
