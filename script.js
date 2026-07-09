@@ -1,17 +1,28 @@
 // Aguarda o carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    const botao = document.getElementById('btnInteragir');
-    const feedback = document.getElementById('feedback');
+    // Seleciona todos os botões de interagir da página
+    const botoes = document.querySelectorAll('.btnInteragir');
 
-    // Adiciona evento de clique ao botão
-    botao.addEventListener('click', () => {
-        // Altera o texto do botão e exibe a mensagem de agradecimento
-        botao.textContent = "Curtido!";
-        botao.style.backgroundColor = "#28a745";
-        botao.style.color = "#ffffff";
-        botao.disabled = true; // Desativa o botão após o clique
-        
-        // Revela a mensagem de feedback tirando a classe 'escondido'
-        feedback.classList.remove('escondido');
+    botoes.forEach(botao => {
+        // Encontra o feedback específico deste artigo (o elemento irmão seguinte)
+        const feedback = botao.nextElementSibling;
+
+        botao.addEventListener('click', () => {
+            const estaCurtido = botao.getAttribute('data-curtido') === 'true';
+
+            if (!estaCurtido) {
+                // Ação de Curtir
+                botao.setAttribute('data-curtido', 'true');
+                botao.textContent = "Curtido!";
+                botao.classList.add('curtido');
+                feedback.classList.remove('escondido');
+            } else {
+                // Ação de Descurtir (Retirar feedback)
+                botao.setAttribute('data-curtido', 'false');
+                botao.textContent = "Gostou da notícia? Deixe seu curtir!";
+                botao.classList.remove('curtido');
+                feedback.classList.add('escondido');
+            }
+        });
     });
 });
